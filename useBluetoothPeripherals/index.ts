@@ -12,8 +12,8 @@ import {atob, btoa} from 'react-native-quick-base64';
 
 type VoidCallback = (result: boolean) => void;
 const manager = new BleManager();
-const PRANOS_SERVICE_UUID = ''; //@ Add uuid
-const PRANOS_SERVICE_CHARACTERISTIC = ''; //@ Add uuid
+const SERVICE_UUID = ''; //@ Add uuid
+const SERVICE_CHARACTERISTIC = ''; //@ Add uuid
 
 interface BluetoothLowEnergyApi {
   requestPermissions(cb: VoidCallback): Promise<void>;
