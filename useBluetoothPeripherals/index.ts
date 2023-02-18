@@ -113,8 +113,8 @@ function useBluetoothPeripherals(): BluetoothLowEnergyApi {
   const startStreamingData = async (device: Device) => {
     if (device) {
       device.monitorCharacteristicForService(
-        PRANOS_SERVICE_UUID,
-        PRANOS_SERVICE_CHARACTERISTIC,
+        SERVICE_UUID,
+        SERVICE_CHARACTERISTIC,
         onUpdated,
       );
     } else {
@@ -146,8 +146,8 @@ function useBluetoothPeripherals(): BluetoothLowEnergyApi {
     try {
       await manager.writeCharacteristicWithResponseForDevice(
         device.id,
-        PRANOS_SERVICE_UUID,
-        PRANOS_SERVICE_CHARACTERISTIC,
+        SERVICE_UUID,
+        SERVICE_CHARACTERISTIC,
         btoa(`${data}`),
       );
     } catch (e) {
